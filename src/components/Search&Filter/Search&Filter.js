@@ -5,7 +5,8 @@ import '../../App.css';
 
 
 const SearchAndFilterStyle = {
-    padding: "1em 2.5em",
+    padding: "1em 5em",
+    flexWrap: "wrap"
   };
 
 const SearchAndFilter = () => {
