@@ -3,14 +3,15 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import thunkMiddleware from 'redux-thunk';
-import { searchCountries, requestCountries } from './reducers';
+import { searchCountries, requestCountries, regionCountries } from './reducers';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 const rootReducer = combineReducers({
   searchCountries,
-  requestCountries
+  requestCountries,
+  regionCountries
 })
 
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));

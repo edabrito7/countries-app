@@ -5,15 +5,15 @@ import SearchAndFilter from './components/Search&Filter/Search&Filter'
 import SearchInput from './components/Search&Filter/SearchInput';
 import CardList from './components/Cards/cardlist';
 import './App.css';
-import { setSearchField, requestCountries } from './actions';
+import { setSearchField, requestCountries, regionCountries } from './actions';
 
 const mapStateToProps = state => {
-  console.log("State",state.searchField);
   return {
     searchField: state.searchCountries.searchField,
     countries: state.requestCountries.countries,
     isPending: state.requestCountries.isPending,
-    error: state.requestCountries.error
+    error: state.requestCountries.error,
+    region: state.regionCountries.region,
   }
 }
 
@@ -37,13 +37,12 @@ class App extends Component {
   }
   
   render () {
-    const { searchField, countries, isPending } = this.props;
+    const { searchField, countries, isPending, region } = this.props;
     const filteredCountriesSearchField = countries.filter(country => {
-      console.log(country.region)
 			return country.name.toLowerCase().includes(searchField.toLowerCase());
     })
-    const filteredCountriesRegions = countries.filter(country => {
-      return country.region.includes("Europe");
+    const filteredCountriesRegions = filteredCountriesSearchField.filter(country => {
+      return country.region.includes(region);
     })
 
  
@@ -61,7 +60,7 @@ class App extends Component {
     <div className="App">
       <Navbar />
       <SearchAndFilter />
-      <CardList countries = {filteredCountriesSearchField} />;
+      <CardList countries = {filteredCountriesRegions} />;
     </div>
   );    
   }

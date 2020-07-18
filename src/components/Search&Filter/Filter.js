@@ -1,18 +1,38 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Dropdown } from 'semantic-ui-react'
+import { setRegion } from '../../actions';
 
-
+const mapStateToProps = state => {
+    return {
+        region: state.regionCountries.region,
+    }
+    
+  }
+  
+  const madDispatchToProps = (dispatch) => {
+    return {
+      onRegionChange: (event,data) => dispatch(setRegion(data.value))
+    } 
+  }
 const Options = [
-    { key: 1, text: 'Choice 1', value: 1 },
-    { key: 2, text: 'Choice 2', value: 2 },
-    { key: 3, text: 'Choice 3', value: 3 },
+    { key: 0, text: 'All', value: '' },
+    { key: 1, text: 'Asia', value: 'Asia' },
+    { key: 2, text: 'Europe', value: 'Europe' },
+    { key: 3, text: 'Americas', value: 'Americas' },
+    { key: 4, text: 'Africa', value: 'Africa' },
+    { key: 5, text: 'Polar', value: 'Polar' },
   ]
-const Filter = () => {
-    return (
-        <Dropdown placeholder='State' search selection options={Options} />
-    )
-} 
 
 
+class Filter extends Component {
+    render() {
+        const { region, onRegionChange } = this.props;
+        return(
+            <Dropdown placeholder='State' search selection options={Options} 
+            onChange={onRegionChange}/>
+        )
+    }
+}
 
-export default Filter;
+export default connect(mapStateToProps, madDispatchToProps)(Filter);

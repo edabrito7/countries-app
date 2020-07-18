@@ -2,7 +2,8 @@ import {
     CHANGE_SEARCH_FIELD,
     REQUEST_COUNTRIES_PENDING,
     REQUEST_COUNTRIES_SUCCESS,
-    REQUEST_COUNTRIES_FAILED
+    REQUEST_COUNTRIES_FAILED,
+    CHANGE_REGION_DROPDOWN
 } from './constants';
 
 
@@ -11,7 +12,10 @@ export const setSearchField = (text) => ({
     payload: text
 })
 
-
+export const setRegion = (text) => ({
+    type: CHANGE_REGION_DROPDOWN,
+    payload: text
+})
 export const requestCountries = () => (dispatch) => {
     dispatch({type: REQUEST_COUNTRIES_PENDING});
     fetch('https://restcountries.eu/rest/v2/all?fields=name;alpha3code;population;capital;region;flag')

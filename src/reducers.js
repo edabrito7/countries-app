@@ -2,11 +2,12 @@ import { CHANGE_SEARCH_FIELD } from './constants';
 import { 
     REQUEST_COUNTRIES_PENDING,
     REQUEST_COUNTRIES_SUCCESS,
-    REQUEST_COUNTRIES_FAILED
+    REQUEST_COUNTRIES_FAILED,
+    CHANGE_REGION_DROPDOWN
 } from './constants';
 
 
-const initialState = {
+const initialStateSearchField = {
     searchField: '',
     isPending: false,
     results: []
@@ -18,8 +19,12 @@ const initialStateCountries = {
     error: ''
 }
 
+const initialStateRegion = {
+    region: '',
+}
 
-export const searchCountries = (state=initialState, action={}) => {
+
+export const searchCountries = (state=initialStateSearchField, action={}) => {
     switch(action.type) {
         case CHANGE_SEARCH_FIELD:
             return Object.assign({}, state, {searchField: action.payload, isPending: true,result:[{"title": action.payload}]});
@@ -28,6 +33,15 @@ export const searchCountries = (state=initialState, action={}) => {
     }
 }
 
+export const regionCountries = (state=initialStateRegion, action={}) => {
+    switch(action.type) {
+        case CHANGE_REGION_DROPDOWN:
+            console.log("action Region reducers", action.payload)
+            return Object.assign({}, state, {region: action.payload});
+        default:
+            return state;
+    }
+}
 
 export const requestCountries = (state=initialStateCountries, action={}) => {
     switch(action.type) {
