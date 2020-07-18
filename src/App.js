@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import Navbar from './components/navigation/navbar';
+import SearchAndFilter from './components/Search&Filter/Search&Filter'
+import CardList from './components/Cards/cardlist';
 import './App.css';
 
-function App() {
+
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      countries: [],
+      searchInput: '',
+    }
+  }
+
+
+  componentDidMount () {
+    fetch('https://restcountries.eu/rest/v2/regionalbloc/eu').then(response =>{
+      return response.json()
+    })
+    .then(users => {
+        this.setState({countries: users})
+        console.log(users);
+        console.log("COlombia", this.state.countries.name)
+    })
+    
+  
+  }
+  
+  render () {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <SearchAndFilter/>
+      <CardList countries = {this.state.countries} />
     </div>
-  );
+  );    
+  }
+
 }
 
 export default App;
