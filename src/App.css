@@ -1,5 +1,6 @@
 .App {
   background: hsl(0, 0%, 97%);
+  background-size: auto;
 }
 
 
@@ -11,3 +12,12 @@
     align-content: center;
 }
 
+
+.Icon {
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+  
+  
+}

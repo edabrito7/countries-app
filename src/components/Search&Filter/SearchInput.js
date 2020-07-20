@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Input } from 'semantic-ui-react'
-import { Search, Grid, Header, Segment } from 'semantic-ui-react'
+
 import { setSearchField } from '../../actions';
  
 
@@ -20,18 +20,7 @@ const mapStateToProps = state => {
     } 
   }
 
-{/*const SearchInput = ({searchField, searchChange}) => {
-    return (
-        <Input 
-        icon='search' 
-        iconPosition='left' 
-        placeholder='Search for a Country' 
-        style={{width: "30em"}} 
-        size="large"
-        onChange={searchChange}
-        />
-    )
-}*/}
+
 
 
 
@@ -39,7 +28,7 @@ class SearchInput extends Component {
 
 
     render () {
-        const { searchField,isLoading,result, onSearchChange } = this.props;
+        const {  onSearchChange } = this.props;
         return (
             <Input
            

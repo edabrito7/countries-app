@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Navbar from './components/navigation/navbar';
+import  Navbar from './components/navigation/navbar';
 import SearchAndFilter from './components/Search&Filter/Search&Filter'
-import SearchInput from './components/Search&Filter/SearchInput';
 import CardList from './components/Cards/cardlist';
+import { Image, Segment } from 'semantic-ui-react'
 import './App.css';
 import { setSearchField, requestCountries, regionCountries } from './actions';
 
@@ -51,9 +51,9 @@ class App extends Component {
    (
     <div className="App">
       <Navbar />
-      <SearchInput />
-      <h1>Loading</h1> 
-    
+      <Segment loading>
+      </Segment>
+      
     </div>
     ) :
    (

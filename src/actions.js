@@ -18,7 +18,7 @@ export const setRegion = (text) => ({
 })
 export const requestCountries = () => (dispatch) => {
     dispatch({type: REQUEST_COUNTRIES_PENDING});
-    fetch('https://restcountries.eu/rest/v2/all?fields=name;alpha3code;population;capital;region;flag')
+    fetch('https://restcountries.eu/rest/v2/all')
     .then(response =>{
       return response.json()
     })
