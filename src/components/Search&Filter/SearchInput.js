@@ -36,7 +36,6 @@ class SearchInput extends Component {
             iconPosition='left' 
             placeholder='Search for a Country' 
             style={{width: "100%"}} 
-            size="medium"
             onChange={onSearchChange}
            
             />

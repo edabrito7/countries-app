@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import  Navbar from './components/navigation/navbar';
 import SearchAndFilter from './components/Search&Filter/Search&Filter'
 import CardList from './components/Cards/cardlist';
-import { Menu, Segment } from 'semantic-ui-react'
+import { Segment } from 'semantic-ui-react'
 import './App.css';
 import { setSearchField, requestCountries } from './actions';
 
@@ -31,6 +31,7 @@ class App extends Component {
 
 
   componentDidMount () {
+    
     this.props.onRequestCountries()
     
   
@@ -53,7 +54,6 @@ class App extends Component {
       <Navbar />
       <Segment loading>
       </Segment>
-      
     </div>
     ) :
    (

@@ -8,7 +8,7 @@ const CardCountry = ({name, population, capital, region, flag, alphacode}) => {
 				<Link to={{pathname:`/cardinfo/${alphacode}`, state:{"name": alphacode }}} style={{color: "black", width: "100%", height: "100%"}}  >
 					<Image src={flag} style={{width: "100%", height: "45%"}}   />
 					<Card.Content style={{gripgap: "10px",gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", padding: "1em" }}>
-						<Card.Header  >{name}</Card.Header>
+						<Card.Header>{name}</Card.Header>
 						<Card.Meta>
 							<span className='date'>{alphacode}</span>
 						</Card.Meta>

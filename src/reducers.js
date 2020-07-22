@@ -9,8 +9,6 @@ import {
 
 const initialStateSearchField = {
     searchField: '',
-    isPending: false,
-    results: []
 }
 
 const initialStateCountries = {
@@ -36,7 +34,6 @@ export const searchCountries = (state=initialStateSearchField, action={}) => {
 export const regionCountries = (state=initialStateRegion, action={}) => {
     switch(action.type) {
         case CHANGE_REGION_DROPDOWN:
-            console.log("action Region reducers", action.payload)
             return Object.assign({}, state, {region: action.payload});
         default:
             return state;

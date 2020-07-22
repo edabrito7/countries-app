@@ -6,11 +6,10 @@ import Borders from './borders';
 
 
 const CardDetails = ({country}) => {
-
     const BordersArray = country.borders.map(border => {
-          return <Borders border={border}/> 
-    
-    })
+            return <Borders border={border}/>   
+      })
+     
     
     return(
         <Grid style={{padding: "3em"}} stackable>
@@ -47,7 +46,7 @@ const CardDetails = ({country}) => {
                                 <strong>Region:</strong> {country.region}
                             </Grid.Column>
                             <Grid.Column width={8}>
-                                <strong>Languages:</strong> {country.languages[0].name} , {country.languages[0].nativeName}
+                                <strong>Languages:</strong> {country.languages[0].name}  ({country.languages[0].nativeName})
                             </Grid.Column>
                         </Grid.Row>
                         <Grid.Row>
@@ -70,7 +69,7 @@ const CardDetails = ({country}) => {
                                 <Grid.Column>
                                     <strong>Border:</strong>
                                 </Grid.Column>
-                                {BordersArray}             
+                                   {BordersArray}          
                         </Grid.Row>
                     </Grid>    
                         
