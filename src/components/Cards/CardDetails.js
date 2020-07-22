@@ -7,11 +7,16 @@ import {
     Link,
     Redirect
   } from "react-router-dom";
+  import Borders from './borders';
 
 
 
 
 const CardDetails = ({country}) => {
+
+    const BodersArray = country.borders.map(border => {
+        return <Borders border={border}/>
+    })
     
     return(
         <Grid style={{padding: "3em"}} stackable>
@@ -67,18 +72,12 @@ const CardDetails = ({country}) => {
                                 <strong>Area:</strong> {country.area}
                             </Grid.Column>
                         </Grid.Row>
-                        <Grid.Row divided columns={country.borders.length}>
-                            <Grid.Column >
-                                <Link to={{pathname:`/cardinfo/${country.borders[0]}`, state:{"name": country.borders[0] }}} style={{color: "black"}}>
-                                <strong>Border:</strong> {country.borders[0]}
-                                </Link>        
-                            </Grid.Column>
-                            <Grid.Column >
-                                <strong>Area:</strong> {country.area}
-                            </Grid.Column>
-                            <Grid.Column >
-                                <strong>Area:</strong> {country.area}
-                            </Grid.Column>
+                        <Grid.Row divided columns={country.borders.length+1}>
+                                <Grid.Column>
+                                    <strong>Border:</strong>
+                                </Grid.Column>
+                                {BodersArray}
+                                      
                         </Grid.Row>
                     </Grid>    
                         
