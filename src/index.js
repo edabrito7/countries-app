@@ -6,6 +6,7 @@ import thunkMiddleware from 'redux-thunk';
 import { searchCountries, requestCountries, regionCountries } from './reducers';
 import './index.css';
 import App from './App';
+import {BrowserRouter as Router } from "react-router-dom";
 import * as serviceWorker from './serviceWorker';
 
 const rootReducer = combineReducers({
@@ -19,7 +20,9 @@ const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
 
 ReactDOM.render(
     <Provider store={store}>
-      <App />
+      <Router basename={process.env.PUBLIC_URL}>
+        <App />
+      </Router> 
     </Provider>
     
   ,document.getElementById('root')

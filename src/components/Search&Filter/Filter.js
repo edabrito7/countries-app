@@ -27,9 +27,9 @@ const Options = [
 
 class Filter extends Component {
     render() {
-        const { region, onRegionChange } = this.props;
+        const {  onRegionChange } = this.props;
         return(
-            <Dropdown placeholder='State' search selection options={Options} 
+            <Dropdown placeholder='Regions' search selection options={Options} 
             onChange={onRegionChange}/>
         )
     }

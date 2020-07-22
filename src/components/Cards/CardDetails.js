@@ -1,21 +1,15 @@
 import React from 'react';
 import { Grid, Image } from 'semantic-ui-react'
-import {
-	BrowserRouter as Router,
-	Switch,
-	Route,
-    Link,
-    Redirect
-  } from "react-router-dom";
-  import Borders from './borders';
+import Borders from './borders';
 
 
 
 
 const CardDetails = ({country}) => {
 
-    const BodersArray = country.borders.map(border => {
-        return <Borders border={border}/>
+    const BordersArray = country.borders.map(border => {
+          return <Borders border={border}/> 
+    
     })
     
     return(
@@ -28,7 +22,7 @@ const CardDetails = ({country}) => {
                     <Grid stackable>
                         <Grid.Row>
                             <Grid.Column width={16}>
-                                <h1>{country.name}</h1>
+                                <h2>{country.name}</h2>
                             </Grid.Column>
                             
                         </Grid.Row>
@@ -69,15 +63,14 @@ const CardDetails = ({country}) => {
                                 <strong>Capital:</strong> {country.capital}
                             </Grid.Column>
                             <Grid.Column width={8}>
-                                <strong>Area:</strong> {country.area}
+                                <strong>Area:</strong> {Intl.NumberFormat("de-DE").format(country.area)} km2
                             </Grid.Column>
                         </Grid.Row>
-                        <Grid.Row divided columns={country.borders.length+1}>
+                        <Grid.Row divided columns={country.borders.length+2}>
                                 <Grid.Column>
                                     <strong>Border:</strong>
                                 </Grid.Column>
-                                {BodersArray}
-                                      
+                                {BordersArray}             
                         </Grid.Row>
                     </Grid>    
                         

@@ -1,16 +1,12 @@
-.App {
-  background: hsl(0, 0%, 97%);
-  background-size: auto;
-}
+
+  .App {
+  
+    background-size: auto;
+    margin-top: 5em;
+  }
 
 
-.bar {
-  display: flex;
-    
-    margin: 0;
-    justify-content: space-between;
-    align-content: center;
-}
+
 
 
 .Icon {

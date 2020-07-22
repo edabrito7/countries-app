@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 import  Navbar from './components/navigation/navbar';
 import SearchAndFilter from './components/Search&Filter/Search&Filter'
 import CardList from './components/Cards/cardlist';
-import { Image, Segment } from 'semantic-ui-react'
+import { Menu, Segment } from 'semantic-ui-react'
 import './App.css';
-import { setSearchField, requestCountries, regionCountries } from './actions';
+import { setSearchField, requestCountries } from './actions';
 
 const mapStateToProps = state => {
   return {
@@ -60,7 +60,7 @@ class App extends Component {
     <div className="App">
       <Navbar />
       <SearchAndFilter />
-      <CardList countries = {filteredCountriesRegions} />;
+      <CardList countriesFiltered = {filteredCountriesRegions} />;
     </div>
   );    
   }
