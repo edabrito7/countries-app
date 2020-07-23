@@ -1,7 +1,7 @@
 import React from 'react'
 import { Menu, Icon} from 'semantic-ui-react'
 
-import "../../App.css";
+import "../../containers/App.css";
 import "./navbar.css";
 
 const Navbar = () => (

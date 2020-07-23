@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Dropdown } from 'semantic-ui-react'
-import { setRegion } from '../../actions';
+import { setRegion } from '../actions';
 
 const mapStateToProps = state => {
     return {

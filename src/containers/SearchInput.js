@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Input } from 'semantic-ui-react'
 
-import { setSearchField } from '../../actions';
+import { setSearchField } from '../actions';
  
 
 

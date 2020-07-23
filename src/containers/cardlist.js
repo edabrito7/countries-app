@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
-import CardCountry from './Card';
-import CardDetails from './CardDetails';
+import CardCountry from '../components/Cards/Card';
+import CardDetails from '../components/Cards/CardDetails';
 import { Card, Button, Icon } from 'semantic-ui-react';
 import {
 	Switch,
 	Route,
 	Link
   } from "react-router-dom";
-import '../../App.css';
+import './App.css';
 import { connect } from 'react-redux';
 
 

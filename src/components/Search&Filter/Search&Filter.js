@@ -1,7 +1,7 @@
 import React from 'react';
-import SearchInput from './SearchInput';
-import Filter from './Filter';
-import '../../App.css';
+import SearchInput from '../../containers/SearchInput';
+import Filter from '../../containers/Filter';
+import '../../containers/App.css';
 import {Grid} from 'semantic-ui-react';
 
 

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import  Navbar from './components/navigation/navbar';
-import SearchAndFilter from './components/Search&Filter/Search&Filter'
-import CardList from './components/Cards/cardlist';
+import  Navbar from '../components/navigation/navbar';
+import SearchAndFilter from '../components/Search&Filter/Search&Filter'
+import CardList from './cardlist';
 import { Segment } from 'semantic-ui-react'
 import './App.css';
-import { setSearchField, requestCountries } from './actions';
+import { setSearchField, requestCountries } from '../actions';
 
 const mapStateToProps = state => {
   return {

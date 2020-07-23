@@ -6,7 +6,7 @@ const CardCountry = ({name, population, capital, region, flag, alphacode}) => {
     return (
 			<Card style={{margin: "3em"}}>
 				<Link to={{pathname:`/cardinfo/${alphacode}`, state:{"name": alphacode }}} style={{color: "black", width: "100%", height: "100%"}}  >
-					<Image src={flag} style={{width: "100%", height: "45%"}}   />
+					<Image src={flag} style={{width: "100%", height: "45%"}}  alt="Country flag" />
 					<Card.Content style={{gripgap: "10px",gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", padding: "1em" }}>
 						<Card.Header>{name}</Card.Header>
 						<Card.Meta>
