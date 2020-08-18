@@ -7,10 +7,8 @@ import "./navbar.css";
 const Navbar = () => (
   <div>
     <Menu fixed='top' vertical fluid>
-      <h1>Where in the World?
-        <Icon name='globe'/> </h1>  
+      <h1>Where in the World? </h1>  
     </Menu>
-    <h4>Made by Eduardo Brito. 2020</h4>
   </div>
     
 
