@@ -1,0 +1,21 @@
+.grid-search-filter {
+    padding: 3em 2em 3em 3em;
+    width: 100%;
+}
+
+
+
+.filter {
+    text-align: right;
+
+    
+}
+
+
+@media screen and (max-width: 800px) {
+
+    .filter {
+        text-align: left;
+    }
+    
+}

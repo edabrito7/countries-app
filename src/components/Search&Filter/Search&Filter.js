@@ -4,16 +4,18 @@ import Filter from '../../containers/Filter';
 import '../../containers/App.css';
 import {Grid} from 'semantic-ui-react';
 
+import './search&filter.css';
+
 
 const SearchAndFilter = () => {
     return (
 
-        <Grid style={{padding: "3em"}}  stackable relaxed>
+        <Grid style={{padding: "3em 2em 3em 3em", width: '100%'}} stackable >
             <Grid.Row columns={2}>
-                <Grid.Column mobile={16} tablet={8} computer={6} floated='left'>
+                <Grid.Column width='5'   floated='left'>
                     <SearchInput/>
                 </Grid.Column>
-                <Grid.Column mobile={16} tablet={8} computer={4} floated='right'>
+                <Grid.Column width='5'  floated='right' className='filter'>
                     <Filter/>
                 </Grid.Column>
             </Grid.Row>

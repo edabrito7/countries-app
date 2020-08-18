@@ -29,8 +29,12 @@ class Filter extends Component {
     render() {
         const {  onRegionChange } = this.props;
         return(
-            <Dropdown placeholder='Regions' search selection options={Options} 
-            onChange={onRegionChange}/>
+            <Dropdown 
+            placeholder='Regions' 
+            search selection 
+            options={Options} 
+            onChange={onRegionChange}
+            />
         )
     }
 }

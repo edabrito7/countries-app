@@ -1,14 +1,14 @@
 import React from 'react';
-import { Card,  Image } from 'semantic-ui-react'
+import { Card } from 'semantic-ui-react'
 import { Link } from "react-router-dom";
 
 const CardCountry = ({name, population, capital, region, flag, alphacode}) => {
     return (
 			<Card style={{margin: "3em"}}>
 				<Link to={{pathname:`/cardinfo/${alphacode}`, state:{"name": alphacode }}} style={{color: "black", width: "100%", height: "100%"}}  >
-					<Image src={flag} style={{width: "100%", height: "45%"}}  alt="Country flag" />
-					<Card.Content style={{gripgap: "10px",gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", padding: "1em" }}>
-						<Card.Header>{name}</Card.Header>
+					<div style={{borderRadius: '0.28571429rem 0.28571429rem 0 0', width: "100%", height: "150px", backgroundImage: `url(${flag})`, backgroundSize: 'cover', backgroundPosition: 'center'}}  alt={`${name} flag`} />
+					<Card.Content style={{gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", padding: "1em 2em" }}>
+						<Card.Header><h3>{name}</h3></Card.Header>
 						<Card.Meta>
 							<span className='date'>{alphacode}</span>
 						</Card.Meta>

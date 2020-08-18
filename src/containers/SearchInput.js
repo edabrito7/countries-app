@@ -31,13 +31,11 @@ class SearchInput extends Component {
         const {  onSearchChange } = this.props;
         return (
             <Input
-           
             icon='search' 
             iconPosition='left' 
             placeholder='Search for a Country' 
             style={{width: "100%"}} 
             onChange={onSearchChange}
-           
             />
         )
 
