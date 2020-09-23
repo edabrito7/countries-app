@@ -20,7 +20,7 @@ You can read Netlify docs to know how to deploy this app or any app you want usi
 
 ## Built With
 
-* [React](https://es.reactjs.org/) - The web framework used
+* [React](https://es.reactjs.org/) - The web library used
 * [React Router](https://reactrouter.com/web/guides/quick-start) -
 * [Redux](https://redux.js.org/introduction/getting-started) - State manager
 * [Semantic-UI-React](https://react.semantic-ui.com/) - UI library
