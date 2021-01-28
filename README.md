@@ -1,6 +1,6 @@
 # Countries App
 
-This is  the solution for frontendmentor's challenge. This challegue consist to integrate REST Countries API to pull country data and display it like was designed
+This is  the solution for frontendmentor's challenge. This challegue consists of  integrating the REST Countries API to pull country data and display as it  was designed
 
 ## Getting Started
 
@@ -24,6 +24,13 @@ You can read Netlify docs to know how to deploy this app or any app you want usi
 * [React Router](https://reactrouter.com/web/guides/quick-start) -
 * [Redux](https://redux.js.org/introduction/getting-started) - State manager
 * [Semantic-UI-React](https://react.semantic-ui.com/) - UI library
+
+## Goals
+
+* Turn sketch into code
+* Improving using Redux
+* getting the hang of React Router
+* Using UI Libraries
 
 ## Author
 
